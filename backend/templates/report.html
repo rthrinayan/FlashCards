@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey {{name}}!</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ecf0f1;
+            font-family: 'Roboto', 'sans-serif';
+            display : flex; 
+            flex-direction: column ; 
+            align-items: center; 
+            justify-content: center;
+            height : 100 vh; 
+            overflow : hidden; 
+            margin: 0;
+        }
+        img{
+            max-width : 100%
+        }
+        .card{
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; 
+            overflow : hidden; 
+            width:350 px;
+        }
+        .card-header {
+            height : 200px; 
+        }
+        .card-header img{
+            object-fit:cover; 
+            height:100%;; 
+            width : 100%;
+        }
+        .card-content{
+            background-color: white;
+            padding: 30px;
+        }
+        .card-title{
+            height : 20px; 
+            margin : 0;
+        }
+        .card-excerpt{
+            color: #777; 
+            margin: 10px 0 20px
+        }
+        .author{
+            display: flex;  
+        }
+        .author-info{
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-around;
+            margin-left:10px;
+            width : 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header" id="header">
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNqCGvVwWCMJWM6msEKev34pAwP_UNoF5pTA&usqp=CAU'>
+
+        </div>
+        <div class="card-content" id = "title">
+            <h3> Good Job {{name}}</h3>
+            <p class="card-excerpt" id="excerpt">
+                We see that you have been revising your decks every day. Here's your progress over the last few days.
+                <br> Let's keep improving that score 
+            </p>
+            <div class="author">
+                <div class="author-info">
+                    <strong id="name">
+                        {{score}}
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
