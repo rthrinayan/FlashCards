@@ -1,0 +1,1 @@
+from backend.flashcards.flashcardModel import Deck, Card
